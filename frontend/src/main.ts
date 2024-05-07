@@ -12,7 +12,6 @@ import 'vuetify/styles'
 import { createVuetify } from 'vuetify'
 import * as components from 'vuetify/components'
 import * as directives from 'vuetify/directives'
-import colors from 'vuetify/lib/util/colors'
 import '@mdi/font/css/materialdesignicons.css'
 
 const vuetify = createVuetify({
@@ -24,11 +23,11 @@ const vuetify = createVuetify({
 })
 
 // Vue router
-import router from './router/router.js'
+import router from './router/router'
 
 
 // Axios
-import './axios/Axios.ts'
+import './axios/axios.ts'
 
 
 const app = createApp(App)

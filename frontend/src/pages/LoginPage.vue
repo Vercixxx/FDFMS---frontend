@@ -135,7 +135,7 @@ const passwordRules = ref([
 
 
 // SignInUser
-import { SignInUser } from '../scripts/LoginUser'
+import { SignInUser } from '../scripts/user'
 
 const SignIn = async () => {
     console.log('Signing in user');
@@ -144,10 +144,8 @@ const SignIn = async () => {
 
     const respose = await SignInUser(username.value.trim(), password.value.trim());
 
-    if (respose) {
-        console.log('User logged in');
-    } else {
-        console.log('User not logged in');
+    if(!respose) {
+        console.log('Failed to sign in user');
     }
 
     loading.value = false;
